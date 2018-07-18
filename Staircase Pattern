@@ -1,0 +1,30 @@
+import java.util.Scanner;
+import java.lang.*;
+public class Staircase1
+	{
+		public static void main(String[] args)
+		{
+			Scanner s = new Scanner(System.in);
+			int n=s.nextInt(),k=n-1,count=0;
+			for(int iter=1;iter<=n;iter++)
+			{
+				if(iter!=n)
+				{
+					System.out.print("");
+				}
+				else if(iter==n)
+				{
+					for(int i=0;i<n-k;i++)
+					{
+						System.out.print("#");
+					}
+					System.out.printf("\n");
+					k--;
+					iter=1;
+					count++;
+					if(count==n)
+					{
+						break;
+					}	
+				}
+			}
